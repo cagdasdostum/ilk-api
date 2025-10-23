@@ -1,6 +1,7 @@
 # 🚌 İzmir ESHOT Durak API
 
 Bu proje, Node.js ve Express.js kullanılarak oluşturulmuş basit bir REST API sunucusudur. Sunucu, İzmir Büyükşehir Belediyesi ESHOT otobüs duraklarının bilgilerini (ID, ad, konum, geçen hatlar) içeren yerel bir `duraklar.json` dosyasını okur ve bu verileri JSON formatında sunar.
+API ayrıca, durakların enlem ve boylam bilgilerini kullanarak OpenStreetMap (Nominatim) servisi üzerinden Ters Coğrafi Kodlama (Reverse Geocoding) yapar ve durağın tam açık adresini de yanıta ekler.
 
 ## ✨ Temel Özellikler
 
@@ -8,11 +9,13 @@ Bu proje, Node.js ve Express.js kullanılarak oluşturulmuş basit bir REST API 
 * Belirli bir durağı `ID` ile sorgulayın.
 * Geçersiz `ID` istekleri için hata yönetimi içerir.
 * Dinamik olarak rastgele "bekleyen yolcu sayısı" bilgisi üretir (simülasyon amaçlı).
+* Koordinat (Enlem/Boylam) bilgisini kullanarak durakların tam açık adresini OpenStreetMap üzerinden getirir.
 
 ## 🔧 Kullanılan Teknolojiler
 
 * **Node.js:** Sunucu taraflı JavaScript çalışma ortamı.
 * **Express.js:** Hızlı ve minimalist bir Node.js web uygulama çatısı.
+* **OpenStreetMap Nominatim API:** Enlem/Boylam verilerini açık adrese dönüştürmek için kullanılır (Reverse Geocoding).
 
 ## ⚖️ Veri Kaynağı ve Lisans
 
@@ -29,6 +32,7 @@ Bu veriler, [Atıf 4.0 Uluslararası (CC BY 4.0)](https://creativecommons.org/li
 ```bash
 npm install express
 ```
+(Not: Proje, Node.js 18+ sürümünde yerleşik olarak bulunan fetch API'sini kullanır. Daha eski bir Node sürümü kullanıyorsanız node-fetch gibi ek bir paket kurmanız gerekebilir.)
 
 ### 2. Veri Dosyası
 
@@ -118,18 +122,13 @@ Parametre olarak gönderilen `DURAK_ID`'ye sahip durağın detaylarını getirir
 * **Örnek İstek:** `GET /app/stops/10001`
 * **Başarılı Yanıt (200 OK):**
     ```json
-    {
-      "message": "10001. durak.",
-      "bekleyenYolcuSayisi": 7,
-      "durak": {
-        "DURAK_ID": 10001,
-        "ADI": "ÖRNEK DURAK 1",
-        "ENLEM": 38.4192,
-        "BOYLAM": 27.1287,
-        "GECEN_HATLAR": ["10", "20", "90"]
-      }
-    }
+        {
+          "message": "Sardunya durağı.",
+          "bekleyenYolcuSayisi": 7,"
+          acikAdres": "222/11. Sokak, Yenigün Mahallesi, Buca, İzmir, Ege Bölgesi, 35390, Türkiye"
+}
     ```
+    (Not: acikAdres alanı OpenStreetMap Nominatim API'sinden dinamik olarak çekilmektedir.)
 
 #### Hata Durumları (ID ile Sorgulama)
 

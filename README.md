@@ -124,7 +124,7 @@ Parametre olarak gönderilen `DURAK_ID`'ye sahip durağın detaylarını getirir
     ```json
         {
           "message": "Sardunya durağı.",
-          "bekleyenYolcuSayisi": 7,"
+          "bekleyenYolcuSayisi": 7,
           "acikAdres": "222/11. Sokak, Yenigün Mahallesi, Buca, İzmir, Ege Bölgesi, 35390, Türkiye"
 }
     ```

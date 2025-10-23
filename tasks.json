@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "task": "Çınaraltı Durağı"
+  },
+  {
+    "id": 2,
+    "task": "Meydan Durağı"
+  },
+  {
+    "id": 3,
+    "task": "Eski Belediye Durağı"
+  },
+  {
+    "id": 4,
+    "task": "Lale Bahçesi Durağı"
+  },
+  {
+    "id": 5,
+    "task": "Atatürk Caddesi Durağı"
+  },
+  {
+    "id": 6,
+    "task": "Gül Sokağı Durağı"
+  },
+  {
+    "id": 7,
+    "task": "Kavaklı Durağı"
+  },
+  {
+    "id": 8,
+    "task": "Üniversite Durağı"
+  },
+  {
+    "id": 9,
+    "task": "Hastane Durağı"
+  },
+  {
+    "id": 10,
+    "task": "Pazar Yeri Durağı"
+  },
+  {
+    "id": 11,
+    "task": "Yeşil Vadi Durağı"
+  },
+  {
+    "id": 12,
+    "task": "Sahil Yolu Durağı"
+  },
+  {
+    "id": 13,
+    "task": "Cumhuriyet Meydanı Durağı"
+  },
+  {
+    "id": 14,
+    "task": "Yıldız Parkı Durağı"
+  },
+  {
+    "id": 15,
+    "task": "Son Durak"
+  }
+]

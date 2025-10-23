@@ -14,6 +14,12 @@ Bu proje, Node.js ve Express.js kullanılarak oluşturulmuş basit bir REST API 
 * **Node.js:** Sunucu taraflı JavaScript çalışma ortamı.
 * **Express.js:** Hızlı ve minimalist bir Node.js web uygulama çatısı.
 
+## ⚖️ Veri Kaynağı ve Lisans
+
+Bu projede kullanılan ESHOT otobüs durağı verileri, **İzmir Büyükşehir Belediyesi Açık Veri Portalı**'ndan temin edilmiştir.
+
+Bu veriler, [Atıf 4.0 Uluslararası (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.tr) lisansı ile lisanslanmıştır. Bu lisans koşulları gereğince, verinin kaynağına atıf yapılmıştır.
+
 ## 🚀 Projeyi Başlatma
 
 ### 1. Kurulum

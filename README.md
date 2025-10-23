@@ -126,9 +126,9 @@ Parametre olarak gönderilen `DURAK_ID`'ye sahip durağın detaylarını getirir
           "message": "Sardunya durağı.",
           "bekleyenYolcuSayisi": 7,
           "acikAdres": "222/11. Sokak, Yenigün Mahallesi, Buca, İzmir, Ege Bölgesi, 35390, Türkiye"
-}
+        }
     ```
-    (Not: acikAdres alanı OpenStreetMap Nominatim API'sinden dinamik olarak çekilmektedir.)
+(Not: acikAdres alanı OpenStreetMap Nominatim API'sinden dinamik olarak çekilmektedir.)
 
 #### Hata Durumları (ID ile Sorgulama)
 
